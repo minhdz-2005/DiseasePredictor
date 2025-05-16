@@ -27,7 +27,8 @@ const Statistic = () => {
 
   return (
     <div className="chart-container">
-      <h2>Thống kê số lần dự đoán bệnh</h2>
+      <h4>Statistics of Disease Prediction</h4>
+      <h6>Base on Prediction times</h6>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={data} layout="vertical" margin={{ top: 20, right: 30, left: 80, bottom: 20 }}>
           <CartesianGrid strokeDasharray="3 3" />

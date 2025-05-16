@@ -1,15 +1,16 @@
 .about-container {
+    background: linear-gradient(to bottom right, #ffffff, #dde3fe, #c0c6d7);
     max-width: 800px;
     margin: 100px auto 50px;
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
 .avatar {
-    font-size: 90px;
-    margin-bottom: 20px;
+    font-size: 100px;
+    margin-bottom: 0px;
 }
 
 .wave {
@@ -30,22 +31,22 @@
 }
 
 .title {
-    color: #FFFFFF;
-    font-size: 24px;
+    color: #03014d;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .info {
-    color: #FFFFFF;
+    color: #000000;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.8;
     color: #333;
 }
 
 .info p {
-    color: #FFFFFF;
+    color: #004084;
     margin: 10px 0;
     display: flex;
     align-items: center;
@@ -62,6 +63,6 @@
     color: #0056b3;
 }
 .info strong {
-    color: #b9dbff;
+    color: #004084;
     min-width: 120px;
 }

@@ -15,16 +15,16 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav navMenu ms-auto">
             <li className="nav-item">
-              <Link className="nav-link navLink" to="/">Dự đoán</Link>
+              <Link className="nav-link navLink" to="/">Predict</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLink" to="/treatment">Cách chữa</Link>
+              <Link className="nav-link navLink" to="/treatment">Treatments</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLink" to="/statistics">Thống kê</Link>
+              <Link className="nav-link navLink" to="/statistics">Statistics</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLink" >Ngôn ngữ</Link>
+              <Link className="nav-link navLink" >Language</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link navLink" to="/about">About</Link>
