@@ -43,12 +43,10 @@ function Treatment() {
       {/* Header cố định */}
       <div className="treatment-header">
         <span className="pillIcon">💊</span>
-        <h2 className="webTitle">Thông tin & Cách chữa bệnh</h2>
+        <h2 className="webTitle">Information & Treatments</h2>
       </div>
 
-      {/* Bố cục 2 cột: Select + Danh sách */}
       <div className="treatment-layout">
-        {/* Bên trái: Select */}
         <div className="treatment-sidebar">
           <Select
             className="selectSymptom"
@@ -56,25 +54,32 @@ function Treatment() {
             value={selectedDisease}
             onChange={handleChange}
             isClearable
-            placeholder="Nhập tên bệnh..."
+            placeholder="Enter disease name..."
             noOptionsMessage={({ inputValue }) =>
               inputValue.length < 2
-                ? "Nhập thêm để hiện gợi ý..."
-                : "Không tìm thấy bệnh nào!"
+                ? "Enter more character for suggestions..."
+                : "Disease not found!"
             }
           />
         </div>
 
-        {/* Bên phải: Danh sách (cuộn riêng) */}
         <div className="treatment-scrollable-list">
           {diseasesToDisplay.length === 0 ? (
-            <p>Không có thông tin bệnh nào.</p>
+            <p>No information.</p>
           ) : (
             diseasesToDisplay.map((d, index) => (
               <div className="card p-3 mb-3" key={index}>
-                <h4>{d.label}</h4>
-                <p><strong>Thông tin:</strong> {d.infomation}</p>
-                <p><strong>Cách chữa:</strong> {d.treatment}</p>
+                <h5>{d.label}</h5>
+                <div className="treatmentRow">
+                  <strong className="itemLabel">Information:</strong>
+                  <span className="itemValue">{d.infomation}</span>
+                </div>
+
+                <div className="treatmentRow">
+                  <strong className="itemLabel">Treatment:</strong>
+                  <span className="itemValue">{d.treatment}</span>
+                </div>
+
               </div>
             ))
           )}
