@@ -1,27 +1,67 @@
-.autocomplete-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  z-index: 1000;
-  max-height: 220px;
+.treatment-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #ffffff, #dde3fe, #c0c6d7);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.pillIcon {
+  font-size: 50px;
+}
+
+.webTitle {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+
+.treatment-header {
+  flex-shrink: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.treatment-layout {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Sidebar cố định chiều rộng */
+.treatment-sidebar {
+  flex: 0 0 300px;
+  align-self: flex-start;
+  margin-left: 30px;
+  position: sticky;
+  top: 20px;
+}
+
+/* Danh sách có cuộn riêng */
+.treatment-scrollable-list {
+  flex: 1;
   overflow-y: auto;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 100%;
+  margin-right: 20px;
+  border-radius: 8px;
+
+  /* Ẩn thanh cuộn */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE & Edge */
 }
 
-.autocomplete-list li {
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+.treatment-scrollable-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
-.autocomplete-list li:hover {
-  background-color: #f0f0f0;
+/* Đẹp hơn chút */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.selectSymptom {
+  width: 100%;
 }

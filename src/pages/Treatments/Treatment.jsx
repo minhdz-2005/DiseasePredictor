@@ -5,8 +5,7 @@ import './Treatment.css';
 
 function Treatment() {
   const [diseases, setDiseases] = useState([]);
-  const [selectedDisease, setSelectedDisease] = useState(null); // đổi thành object
-  const [treatmentInfo, setTreatmentInfo] = useState(null);
+  const [selectedDisease, setSelectedDisease] = useState(null);
 
   // Lấy danh sách bệnh
   useEffect(() => {
@@ -17,55 +16,73 @@ function Treatment() {
       .catch(err => console.error("Lỗi tải danh sách bệnh:", err));
   }, []);
 
-  // Chuẩn bị options cho react-select
+  // Tạo options cho react-select
   const options = diseases.map(d => ({
     value: d.disease,
     label: d.disease,
-    info: d.infomation,
+    infomation: d.infomation,
     treatment: d.treatment,
   }));
 
-  // Xử lý chọn bệnh
+  // Khi chọn một bệnh
   const handleChange = (selectedOption) => {
     setSelectedDisease(selectedOption);
-    if(selectedOption) {
-      setTreatmentInfo({
-        infomation: selectedOption.info,
-        treatment: selectedOption.treatment,
-      });
-    } else {
-      setTreatmentInfo(null);
-    }
   };
 
-  return (
-    <div className="container mt-4">
-      <span className="pillIcon">💊</span>
-      <h2 className="webTitle mb-4">Information and Treatment</h2>
+  // Danh sách bệnh để hiển thị
+  const diseasesToDisplay = selectedDisease
+    ? [selectedDisease]
+    : diseases.map(d => ({
+        label: d.disease,
+        infomation: d.infomation,
+        treatment: d.treatment,
+      }));
 
-      <div className="form-group mb-3">
-        <Select
-          options={options}
-          value={selectedDisease}
-          onChange={handleChange}
-          placeholder="Enter disease name..."
-          isClearable
-          noOptionsMessage={({ inputValue }) =>
-            inputValue.length < 2
-              ? "Enter a character for suggestion..."
-              : "Sorry but I can't find a disease that match your disease name!"
-          }
-        />
+  return (
+    <div className="treatment-container">
+      {/* Header cố định */}
+      <div className="treatment-header">
+        <span className="pillIcon">💊</span>
+        <h2 className="webTitle">Thông tin & Cách chữa bệnh</h2>
       </div>
 
-      {treatmentInfo && (
-        <div className="card p-3 mt-3">
-          <h4>{selectedDisease.label}</h4>
-          <p><strong>Information:</strong> {treatmentInfo.infomation}</p>
-          <p><strong>Treatment:</strong> {treatmentInfo.treatment}</p>
+      {/* Bố cục 2 cột: Select + Danh sách */}
+      <div className="treatment-layout">
+        {/* Bên trái: Select */}
+        <div className="treatment-sidebar">
+          <Select
+            className="selectSymptom"
+            options={options}
+            value={selectedDisease}
+            onChange={handleChange}
+            isClearable
+            placeholder="Nhập tên bệnh..."
+            noOptionsMessage={({ inputValue }) =>
+              inputValue.length < 2
+                ? "Nhập thêm để hiện gợi ý..."
+                : "Không tìm thấy bệnh nào!"
+            }
+          />
         </div>
-      )}
+
+        {/* Bên phải: Danh sách (cuộn riêng) */}
+        <div className="treatment-scrollable-list">
+          {diseasesToDisplay.length === 0 ? (
+            <p>Không có thông tin bệnh nào.</p>
+          ) : (
+            diseasesToDisplay.map((d, index) => (
+              <div className="card p-3 mb-3" key={index}>
+                <h4>{d.label}</h4>
+                <p><strong>Thông tin:</strong> {d.infomation}</p>
+                <p><strong>Cách chữa:</strong> {d.treatment}</p>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
+
+
   );
 }
 
