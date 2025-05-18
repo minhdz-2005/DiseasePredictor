@@ -26,18 +26,24 @@ const Statistic = () => {
   }, []);
 
   return (
-    <div className="chart-container">
-      <h4>Statistics of Disease Prediction</h4>
-      <h6>Base on Prediction times</h6>
-      <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={data} layout="vertical" margin={{ top: 20, right: 30, left: 80, bottom: 20 }}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis type="number" />
-          <YAxis dataKey="disease" type="category" />
-          <Tooltip />
-          <Bar dataKey="count" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
+    <div className="page-container">
+      <div className="chart-container">
+        <div className="statistic-header">
+          <span className="statisticIcon">📊</span>
+          <h4>Statistics of Disease Prediction</h4>
+          <h6>Base on Prediction times</h6>
+        </div>
+
+        <ResponsiveContainer width="100%" height={400}>
+          <BarChart data={data} layout="vertical" margin={{ top: 20, right: 30, left: 80, bottom: 20 }}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis type="number" />
+            <YAxis dataKey="disease" type="category" />
+            <Tooltip />
+            <Bar dataKey="count" fill="#8884d8" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };

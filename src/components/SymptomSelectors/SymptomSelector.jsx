@@ -42,7 +42,7 @@ function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
 
   return (
     <div className="mb-3">
-      <label className="form-label">Chọn triệu chứng</label>
+      <label className="form-label">Select symptoms</label>
       <Select
         className='selectSymptom'
         isMulti
@@ -50,11 +50,11 @@ function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
         value={selectedOptions}
         onChange={handleChange}
         onInputChange={value => setInputValue(value)}
-        placeholder="Nhập triệu chứng..."
+        placeholder="Enter your symptoms..."
         noOptionsMessage={({ inputValue }) =>
           inputValue.length < 2
-            ? "Nhập thêm để hiện gợi ý..."
-            : "Không tìm thấy triệu chứng nào !"
+            ? "Enter more character for suggestions..."
+            : "Symptom not found !"
         }
         
       />

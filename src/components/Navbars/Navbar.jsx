@@ -24,9 +24,6 @@ function Navbar() {
               <Link className="nav-link navLink" to="/statistics">Statistics</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLink" >Language</Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link navLink" to="/about">About</Link>
             </li>
           </ul>

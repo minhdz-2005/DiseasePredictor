@@ -45,5 +45,88 @@
   color: rgb(0, 0, 0);
 }
 .brainIcon {
-  font-size: 5rem;
+  font-size: 4rem;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;  /* Căn giữa theo chiều ngang */
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  height: 80vh;            /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+.predict-container {
+  height: 80vh;
+  width: 90vw;
+  max-width: 1200px;
+
+  margin: 0 auto; /* Căn giữa ngang */
+  padding: 0px 20px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  background: linear-gradient(to bottom right, #ffffff, #d1d9ff, #9ea5bb);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.predict-layout {
+  flex: 1;
+  display: flex;
+  gap: 5%;
+  overflow: hidden;
+}
+
+.predict-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 0px;
+}
+
+.predictButton {
+  align-self: center;
+}
+
+.predict-right {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 100%;
+  border-radius: 8px;
+  padding-right: 10px;
+
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.predict-right::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  border-radius: 12px;
+  margin: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.treatmentRow {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.itemLabel {
+  font-size: 14px;
+  min-width: fit-content;
+  font-weight: bold;
+}
+
+.itemValue {
+  font-size: 14px;
+  flex: 1;
 }

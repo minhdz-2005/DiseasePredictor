@@ -1,15 +1,16 @@
-
 .chart-container {
-    min-width: 600px;
+    height: 80vh;
+    width: 90vw;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 24px;
     background: linear-gradient(to bottom right, #ffffff, #dde3fe, #c0c6d7);
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
 }
 
-.chart-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #16025e;
+
+.statisticIcon {
+  font-size: 4rem;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }

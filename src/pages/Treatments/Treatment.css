@@ -1,5 +1,15 @@
+.page-container {
+  display: flex;
+  justify-content: center;  /* Căn giữa theo chiều ngang */
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  height: 80vh;            /* Chiếm toàn bộ chiều cao màn hình */
+}
+
 .treatment-container {
   height: 80vh;
+  width: 90vw;
+  max-width: 1200px;
+
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

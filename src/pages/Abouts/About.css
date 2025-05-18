@@ -1,5 +1,6 @@
 .about-container {
-    background: linear-gradient(to bottom right, #ffffff, #dde3fe, #c0c6d7);
+    height: 70vh;
+    background: linear-gradient(to bottom right, #ffffff, #cad2f8, #b4b9c9);
     max-width: 800px;
     margin: 100px auto 50px;
     padding: 30px;
@@ -11,6 +12,7 @@
 .avatar {
     font-size: 100px;
     margin-bottom: 0px;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .wave {
@@ -35,6 +37,7 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .info {

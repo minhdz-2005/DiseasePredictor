@@ -39,54 +39,55 @@ function Treatment() {
       }));
 
   return (
-    <div className="treatment-container">
-      {/* Header cố định */}
-      <div className="treatment-header">
-        <span className="pillIcon">💊</span>
-        <h2 className="webTitle">Information & Treatments</h2>
-      </div>
-
-      <div className="treatment-layout">
-        <div className="treatment-sidebar">
-          <Select
-            className="selectSymptom"
-            options={options}
-            value={selectedDisease}
-            onChange={handleChange}
-            isClearable
-            placeholder="Enter disease name..."
-            noOptionsMessage={({ inputValue }) =>
-              inputValue.length < 2
-                ? "Enter more character for suggestions..."
-                : "Disease not found!"
-            }
-          />
+    <div className='page-container'>
+      <div className="treatment-container">
+        {/* Header cố định */}
+        <div className="treatment-header">
+          <span className="pillIcon">💊</span>
+          <h2 className="webTitle">Information & Treatments</h2>
         </div>
 
-        <div className="treatment-scrollable-list">
-          {diseasesToDisplay.length === 0 ? (
-            <p>No information.</p>
-          ) : (
-            diseasesToDisplay.map((d, index) => (
-              <div className="card p-3 mb-3" key={index}>
-                <h5>{d.label}</h5>
-                <div className="treatmentRow">
-                  <strong className="itemLabel">Information:</strong>
-                  <span className="itemValue">{d.infomation}</span>
-                </div>
+        <div className="treatment-layout">
+          <div className="treatment-sidebar">
+            <Select
+              className="selectSymptom"
+              options={options}
+              value={selectedDisease}
+              onChange={handleChange}
+              isClearable
+              placeholder="Enter disease name..."
+              noOptionsMessage={({ inputValue }) =>
+                inputValue.length < 2
+                  ? "Enter more character for suggestions..."
+                  : "Disease not found!"
+              }
+            />
+          </div>
 
-                <div className="treatmentRow">
-                  <strong className="itemLabel">Treatment:</strong>
-                  <span className="itemValue">{d.treatment}</span>
-                </div>
+          <div className="treatment-scrollable-list">
+            {diseasesToDisplay.length === 0 ? (
+              <p>No information.</p>
+            ) : (
+              diseasesToDisplay.map((d, index) => (
+                <div className="card p-3 mb-3" key={index}>
+                  <h5>{d.label}</h5>
+                  <div className="treatmentRow">
+                    <strong className="itemLabel">Information:</strong>
+                    <span className="itemValue">{d.infomation}</span>
+                  </div>
 
-              </div>
-            ))
-          )}
+                  <div className="treatmentRow">
+                    <strong className="itemLabel">Treatment:</strong>
+                    <span className="itemValue">{d.treatment}</span>
+                  </div>
+
+                </div>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </div>
-
 
   );
 }
