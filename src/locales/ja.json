@@ -2,5 +2,18 @@
   "predict": "予測",
   "treatments": "治療法",
   "statistics": "統計",
-  "about": "紹介"
+  "about": "紹介",
+
+  "aboutpage": {
+    "hello": "こんにちは！",
+    "name": "私はグエン・ドゥック・ミンです",
+    "infoLabel": "情報",
+    "info": "K23T_Nhat2 - ダナン科学技術大学",
+    "emailLabel": "メール",
+    "githubLabel": "GitHub",
+    "slackLabel": "スラック",
+    "chatworkLabel": "チャットワーク",
+    "facebookLabel": "フェイスブック"
+  }
+
 }

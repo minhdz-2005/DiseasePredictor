@@ -2,5 +2,18 @@
   "predict": "Dự đoán",
   "treatments": "Chữa trị",
   "statistics": "Thống kê",
-  "about": "Giới thiệu"
+  "about": "Giới thiệu",
+
+  "aboutpage": {
+    "hello": "Xin chào!",
+    "name": "Mình là Nguyễn Đức Minh",
+    "infoLabel": "Thông tin",
+    "info": "K23T_Nhat2 - Trường Đại học Bách Khoa Đà Nẵng",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "slackLabel": "Slack",
+    "chatworkLabel": "Chatwork",
+    "facebookLabel": "Facebook"
+  }
+
 }

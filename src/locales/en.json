@@ -2,5 +2,18 @@
   "predict": "Predict",
   "treatments": "Treatments",
   "statistics": "Statistics",
-  "about": "About"
+  "about": "About",
+
+  "aboutpage": {
+    "hello": "Hello!",
+    "name": "I'm Nguyen Duc Minh",
+    "infoLabel": "Info",
+    "info": "K23T_Nhat2 - Da Nang University of Science and Technology",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "slackLabel": "Slack",
+    "chatworkLabel": "Chatwork",
+    "facebookLabel": "Facebook"
+  }
+
 }
