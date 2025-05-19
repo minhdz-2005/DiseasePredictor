@@ -1,10 +1,3 @@
-.page-container {
-  display: flex;
-  justify-content: center;  /* Căn giữa theo chiều ngang */
-  align-items: center;      /* Căn giữa theo chiều dọc */
-  height: 80vh;            /* Chiếm toàn bộ chiều cao màn hình */
-}
-
 .treatment-container {
   height: 80vh;
   width: 90vw;
@@ -42,7 +35,6 @@
   overflow: hidden;
 }
 
-/* Sidebar cố định chiều rộng */
 .treatment-sidebar {
   flex: 0;
   align-self: flex-start;
@@ -53,7 +45,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Danh sách có cuộn riêng */
 .treatment-scrollable-list {
   flex: 1;
   overflow-y: auto;
@@ -61,16 +52,14 @@
   margin-right: 20px;
   border-radius: 8px;
 
-  /* Ẩn thanh cuộn */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .treatment-scrollable-list::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
-/* Đẹp hơn chút */
 .card {
   border-radius: 12px;
   margin: 5px;

@@ -51,9 +51,9 @@
 
 .page-container {
   display: flex;
-  justify-content: center;  /* Căn giữa theo chiều ngang */
-  align-items: center;      /* Căn giữa theo chiều dọc */
-  height: 80vh;            /* Chiếm toàn bộ chiều cao màn hình */
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
 .predict-container {
@@ -61,7 +61,7 @@
   width: 90vw;
   max-width: 1200px;
 
-  margin: 0 auto; /* Căn giữa ngang */
+  margin: 0 auto;
   padding: 0px 20px;
 
   display: flex;
