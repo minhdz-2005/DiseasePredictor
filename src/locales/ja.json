@@ -14,6 +14,57 @@
     "slackLabel": "スラック",
     "chatworkLabel": "チャットワーク",
     "facebookLabel": "フェイスブック"
+  },
+
+  "statistic": {
+    "title": "病気予測の統計",
+    "subtitle": "予測回数に基づく",
+    "countLabel": "予測回数"
+  },
+
+
+  "disease": {
+    "Fungal infection": "真菌感染症",
+    "Allergy": "アレルギー",
+    "GERD": "胃食道逆流症",
+    "Chronic cholestasis": "慢性胆汁うっ滞",
+    "Drug Reaction": "薬物反応",
+    "Peptic ulcer diseae": "消化性潰瘍疾患",
+    "AIDS": "エイズ",
+    "Diabetes": "糖尿病",
+    "Gastroenteritis": "胃腸炎",
+    "Bronchial Asthma": "気管支喘息",
+    "Hypertension": "高血圧",
+    "Migraine": "片頭痛",
+    "Cervical spondylosis": "頚椎症",
+    "Paralysis (brain hemorrhage)": "麻痺（脳出血）",
+    "Jaundice": "黄疸",
+    "Malaria": "マラリア",
+    "Chicken pox": "水痘",
+    "Dengue": "デング熱",
+    "Typhoid": "腸チフス",
+    "Hepatitis A": "A型肝炎",
+    "Hepatitis B": "B型肝炎",
+    "Hepatitis C": "C型肝炎",
+    "Hepatitis D": "D型肝炎",
+    "Hepatitis E": "E型肝炎",
+    "Alcoholic hepatitis": "アルコール性肝炎",
+    "Tuberculosis": "結核",
+    "Common Cold": "風邪",
+    "Pneumonia": "肺炎",
+    "Dimorphic hemmorhoids(piles)": "混合型痔核",
+    "Heart attack": "心臓発作",
+    "Varicose veins": "静脈瘤",
+    "Hypothyroidism": "甲状腺機能低下症",
+    "Hyperthyroidism": "甲状腺機能亢進症",
+    "Hypoglycemia": "低血糖症",
+    "Osteoarthristis": "変形性関節症",
+    "Arthritis": "関節炎",
+    "(vertigo) Paroymsal  Positional Vertigo": "良性発作性頭位めまい症",
+    "Acne": "ニキビ",
+    "Urinary tract infection": "尿路感染症",
+    "Psoriasis": "乾癬",
+    "Impetigo": "とびひ"
   }
 
 }

@@ -14,6 +14,56 @@
     "slackLabel": "Slack",
     "chatworkLabel": "Chatwork",
     "facebookLabel": "Facebook"
+  },
+
+  "statistic": {
+    "title": "Thống kê dự đoán bệnh",
+    "subtitle": "Dựa trên số lần dự đoán",
+    "countLabel": "Số lần dự đoán"
+  },
+
+  "disease": {
+    "Fungal infection": "Nhiễm trùng nấm",
+    "Allergy": "Dị ứng",
+    "GERD": "Trào ngược dạ dày thực quản",
+    "Chronic cholestasis": "Ứ mật mãn tính",
+    "Drug Reaction": "Phản ứng thuốc",
+    "Peptic ulcer diseae": "Loét dạ dày tá tràng",
+    "AIDS": "Hội chứng suy giảm miễn dịch (AIDS)",
+    "Diabetes": "Tiểu đường",
+    "Gastroenteritis": "Viêm dạ dày ruột",
+    "Bronchial Asthma": "Hen phế quản",
+    "Hypertension": "Tăng huyết áp",
+    "Migraine": "Đau nửa đầu",
+    "Cervical spondylosis": "Thoái hóa đốt sống cổ",
+    "Paralysis (brain hemorrhage)": "Liệt (xuất huyết não)",
+    "Jaundice": "Vàng da",
+    "Malaria": "Sốt rét",
+    "Chicken pox": "Thủy đậu",
+    "Dengue": "Sốt xuất huyết",
+    "Typhoid": "Thương hàn",
+    "Hepatitis A": "Viêm gan A",
+    "Hepatitis B": "Viêm gan B",
+    "Hepatitis C": "Viêm gan C",
+    "Hepatitis D": "Viêm gan D",
+    "Hepatitis E": "Viêm gan E",
+    "Alcoholic hepatitis": "Viêm gan do rượu",
+    "Tuberculosis": "Lao phổi",
+    "Common Cold": "Cảm lạnh thông thường",
+    "Pneumonia": "Viêm phổi",
+    "Dimorphic hemmorhoids(piles)": "Trĩ hỗn hợp",
+    "Heart attack": "Nhồi máu cơ tim",
+    "Varicose veins": "Giãn tĩnh mạch",
+    "Hypothyroidism": "Suy giáp",
+    "Hyperthyroidism": "Cường giáp",
+    "Hypoglycemia": "Hạ đường huyết",
+    "Osteoarthristis": "Thoái hóa khớp",
+    "Arthritis": "Viêm khớp",
+    "(vertigo) Paroymsal  Positional Vertigo": "Chóng mặt tư thế kịch phát lành tính",
+    "Acne": "Mụn trứng cá",
+    "Urinary tract infection": "Nhiễm trùng đường tiết niệu",
+    "Psoriasis": "Vảy nến",
+    "Impetigo": "Nhiễm trùng da"
   }
 
 }
