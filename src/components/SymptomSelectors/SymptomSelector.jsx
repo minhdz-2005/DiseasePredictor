@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
-import { useState } from 'react';
-import './SymptomSelector.css'
+import { useTranslation } from 'react-i18next';
+import './SymptomSelector.css';
 
 function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
-
+  const { t } = useTranslation();
   const [inputValue, setInputValue] = useState("");
 
-  // Sắp xếp theo startsWith trước, includes sau
+  // Lọc và sắp xếp triệu chứng
   const filteredSymptoms = symptoms
     .filter(symptom => {
       const lower = symptom.toLowerCase();
@@ -23,14 +23,12 @@ function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
       return a.localeCompare(b);
     });
 
-  // 1. Tạo danh sách options từ symptoms & sắp xếp theo alphabet
-  const options = filteredSymptoms
-  .map(symptom => ({
+  // Tạo options từ danh sách triệu chứng
+  const options = filteredSymptoms.map(symptom => ({
     value: symptom,
-    label: symptom
+    label: t(`symptom.${symptom}`)
   }));
 
-  // 2. Lọc ra những triệu chứng được chọn
   const selectedOptions = options.filter(opt =>
     selectedSymptoms.includes(opt.value)
   );
@@ -42,21 +40,20 @@ function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
 
   return (
     <div className="mb-3">
-      <label className="form-label">Select symptoms</label>
+      <label className="form-label">{t('symptomselector.label')}</label>
       <Select
-        className='selectSymptom'
+        className="selectSymptom"
         isMulti
         options={options}
         value={selectedOptions}
         onChange={handleChange}
         onInputChange={value => setInputValue(value)}
-        placeholder="Enter your symptoms..."
+        placeholder={t('symptomselector.placeholder')}
         noOptionsMessage={({ inputValue }) =>
           inputValue.length < 2
-            ? "Enter more character for suggestions..."
-            : "Symptom not found !"
+            ? t('symptomselector.moreCharacters')
+            : t('symptomselector.notFound')
         }
-        
       />
     </div>
   );

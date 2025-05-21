@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SymptomSelector from '/src/components/SymptomSelectors/SymptomSelector';
+import { useTranslation } from 'react-i18next';
 import './Predict.css';
 
 function Predict() {
+  const { t } = useTranslation();
   const [allSymptoms, setAllSymptoms] = useState([]);
   const [selectedSymptoms, setSelectedSymptoms] = useState([]);
   const [predictions, setPredictions] = useState([]);
@@ -18,7 +20,7 @@ function Predict() {
 
   // Hàm gọi dự đoán
   const handlePredict = () => {
-    if (selectedSymptoms.length === 0) return alert("Please choose at least one symptom!");
+    if (selectedSymptoms.length === 0) return alert(t("predictpage.alert"));
 
     axios.post("http://127.0.0.1:8000/predict", {
       symptoms: selectedSymptoms
@@ -38,8 +40,8 @@ function Predict() {
             return {
               disease: p.disease,
               probability: p.probability,
-              infomation: info?.infomation || "Information not found.",
-              treatment: info?.treatment || "Treatment not found."
+              infomation: info?.infomation || t("predictpage.noInfo"),
+              treatment: info?.treatment || t("predictpage.noTreatment")
             };
           });
 
@@ -54,7 +56,7 @@ function Predict() {
     <div className="page-wrapper">
       <div className="predict-container">
         <span className='brainIcon'>🧠</span>
-        <h2 className="webTitle mb-3">Disease Prediction</h2>
+        <h2 className="webTitle mb-3">{t("predictpage.title")}</h2>
 
         <div className="predict-layout">
           <div className="predict-left">
@@ -65,16 +67,16 @@ function Predict() {
             />
 
             <button className="predictButton btn btn-primary mt-2" onClick={handlePredict}>
-              Predict 🔍
+              {t("predictpage.button")} 🔍
             </button>
 
             {predictions.length > 0 && (
               <div className="mt-4 resultTable">
-                <h4>Prediction results:</h4>
+                <h4>{t("predictpage.resultTitle")}</h4>
                 <ul className="list-group">
                   {predictions.map((p, index) => (
                     <li key={index} className="list-group-item d-flex justify-content-between">
-                      <strong>{p.disease}</strong>
+                      <strong>{t(`disease.${p.disease}`)}</strong>
                       <span>{p.probability}</span>
                     </li>
                   ))}
@@ -87,25 +89,25 @@ function Predict() {
           <div className="predict-right">
             {treatmentsInfo.length > 0 ? (
               <>
-                <h4>Information & Treatment:</h4>
+                <h4>{t("predictpage.infoTreatment")}</h4>
                 {treatmentsInfo.map((item, index) => (
                   <div key={index} className="card p-3 mb-3">
-                    <h5>{item.disease}</h5>
+                    <h5>{t(`disease.${item.disease}`)}</h5>
 
                     <div className="treatmentRow">
-                      <strong className="itemLabel">Information:</strong>
-                      <span className="itemValue">{item.infomation}</span>
+                      <strong className="itemLabel">{t("predictpage.information")}:</strong>
+                      <span className="itemValue">{t(`information.${item.disease}`)}</span>
                     </div>
 
                     <div className="treatmentRow">
-                      <strong className="itemLabel">Treatment:</strong>
-                      <span className="itemValue">{item.treatment}</span>
+                      <strong className="itemLabel">{t("predictpage.treatment")}:</strong>
+                      <span className="itemValue">{t(`treatment.${item.disease}`)}</span>
                     </div>
                   </div>
                 ))}
               </>
             ) : (
-              <p>No prediction results yet.</p>
+              <p>{t("predictpage.noResult")}</p>
             )}
           </div>
         </div>

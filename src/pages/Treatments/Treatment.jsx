@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import Select from 'react-select';
 import './Treatment.css';
 
 function Treatment() {
+  const { t } = useTranslation();
   const [diseases, setDiseases] = useState([]);
-  const [selectedDisease, setSelectedDisease] = useState(null);
+  const [selectedDiseaseValue, setSelectedDiseaseValue] = useState(null);
 
-  // Lấy danh sách bệnh
+  // Lấy danh sách bệnh từ backend
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/treatments")
       .then(res => {
@@ -16,35 +18,28 @@ function Treatment() {
       .catch(err => console.error("Lỗi tải danh sách bệnh:", err));
   }, []);
 
-  // Tạo options cho react-select
+  // Tạo danh sách options dịch mỗi lần render
   const options = diseases.map(d => ({
     value: d.disease,
-    label: d.disease,
-    infomation: d.infomation,
-    treatment: d.treatment,
+    label: t(`disease.${d.disease}`),
   }));
 
-  // Khi chọn một bệnh
+  // Khi chọn bệnh
   const handleChange = (selectedOption) => {
-    setSelectedDisease(selectedOption);
+    setSelectedDiseaseValue(selectedOption ? selectedOption.value : null);
   };
 
-  // Danh sách bệnh để hiển thị
-  const diseasesToDisplay = selectedDisease
-    ? [selectedDisease]
-    : diseases.map(d => ({
-        label: d.disease,
-        infomation: d.infomation,
-        treatment: d.treatment,
-      }));
+  // Tạo danh sách hiển thị
+  const diseasesToDisplay = selectedDiseaseValue
+    ? diseases.filter(d => d.disease === selectedDiseaseValue)
+    : diseases;
 
   return (
     <div className='page-container'>
       <div className="treatment-container">
-        {/* Header cố định */}
         <div className="treatment-header">
           <span className="pillIcon">💊</span>
-          <h2 className="webTitle">Information & Treatments</h2>
+          <h2 className="webTitle">{t("treatmentpage.title")}</h2>
         </div>
 
         <div className="treatment-layout">
@@ -52,35 +47,35 @@ function Treatment() {
             <Select
               className="selectSymptom"
               options={options}
-              value={selectedDisease}
+              value={options.find(opt => opt.value === selectedDiseaseValue) || null}
               onChange={handleChange}
               isClearable
-              placeholder="Enter disease name..."
+              placeholder={t("treatmentpage.placeholder")}
               noOptionsMessage={({ inputValue }) =>
                 inputValue.length < 2
-                  ? "Enter more character for suggestions..."
-                  : "Disease not found!"
+                  ? t("treatmentpage.noOptionsShort")
+                  : t("treatmentpage.noOptionsNotFound")
               }
             />
           </div>
 
           <div className="treatment-scrollable-list">
             {diseasesToDisplay.length === 0 ? (
-              <p>No information.</p>
+              <p>{t("treatment.noInfo")}</p>
             ) : (
               diseasesToDisplay.map((d, index) => (
                 <div className="card p-3 mb-3" key={index}>
-                  <h5>{d.label}</h5>
+                  <h5>{t(`disease.${d.disease}`)}</h5>
+
                   <div className="treatmentRow">
-                    <strong className="itemLabel">Information:</strong>
-                    <span className="itemValue">{d.infomation}</span>
+                    <strong className="itemLabel">{t("treatmentpage.info")}:</strong>
+                    <span className="itemValue">{t(`information.${d.disease}`)}</span>
                   </div>
 
                   <div className="treatmentRow">
-                    <strong className="itemLabel">Treatment:</strong>
-                    <span className="itemValue">{d.treatment}</span>
+                    <strong className="itemLabel">{t("treatmentpage.treatment")}:</strong>
+                    <span className="itemValue">{t(`treatment.${d.disease}`)}</span>
                   </div>
-
                 </div>
               ))
             )}
@@ -88,7 +83,6 @@ function Treatment() {
         </div>
       </div>
     </div>
-
   );
 }
 

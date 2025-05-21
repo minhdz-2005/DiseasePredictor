@@ -46,8 +46,8 @@ const Statistic = () => {
       <div className="chart-container">
         <div className="statistic-header">
           <span className="statisticIcon">📊</span>
-          <h4>{t("statistic.title")}</h4>
-          <h6>{t("statistic.subtitle")}</h6>
+          <h4>{t("statisticpage.title")}</h4>
+          <h6>{t("statisticpage.subtitle")}</h6>
         </div>
 
         <ResponsiveContainer width="100%" height="75%">
@@ -59,7 +59,7 @@ const Statistic = () => {
               type="category" 
               width={150}
               tick={{ fontSize: 15 }} />
-            <Tooltip formatter={(value) => [value, t("statistic.countLabel")]} />
+            <Tooltip formatter={(value) => [value, t("statisticpage.countLabel")]} />
             <Bar dataKey="count" fill="#7169DA" />
           </BarChart>
         </ResponsiveContainer>
