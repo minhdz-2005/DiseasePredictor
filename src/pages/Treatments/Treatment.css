@@ -1,25 +1,27 @@
 .treatment-container {
+  min-height: fit-content;
   height: 80vh;
   width: 90vw;
   max-width: 1200px;
+  margin-top: 40px;
 
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background: linear-gradient(to bottom right, #ffffff, #d1d9ff, #9ea5bb);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 
 .pillIcon {
   font-size: 50px;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .webTitle {
   font-size: 24px;
-  color: rgb(0, 0, 0);
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: #03014d;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .treatment-header {
@@ -45,19 +47,57 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+.selectSymptom .react-select__menu-list {
+  scrollbar-width: thin !important;
+  scrollbar-color: #aaa #f0f0f0 !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+  border-radius: 4px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  border-radius: 4px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}
+
 .treatment-scrollable-list {
   flex: 1;
   overflow-y: auto;
   max-height: 100%;
-  margin-right: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-inline: 5%;
+  margin-bottom: 20px;
 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 .treatment-scrollable-list::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+.treatment-scrollable-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.treatment-scrollable-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.treatment-scrollable-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .card {
@@ -86,3 +126,15 @@
   font-size: 14px;
   flex: 1;
 }
+.treatment-searchbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.selectSymptom {
+  width: 100%;
+  max-width: 500px;
+}
+

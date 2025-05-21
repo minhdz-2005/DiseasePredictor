@@ -43,6 +43,7 @@ function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {
       <label className="form-label">{t('symptomselector.label')}</label>
       <Select
         className="selectSymptom"
+        classNamePrefix="custom"
         isMulti
         options={options}
         value={selectedOptions}

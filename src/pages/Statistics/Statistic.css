@@ -1,18 +1,23 @@
 .chart-container {
-    height: 80vh;
-    width: 90vw;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: linear-gradient(to bottom right, #ffffff, #dde3fe, #c0c6d7);
-    border-radius: 20px;
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+  height: 80vh;
+  width: 90vw;
+  max-width: 1200px;
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 
 .statistic-header h4, h6 {
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  color: #03014d;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .statisticIcon {
   font-size: 4rem;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }

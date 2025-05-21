@@ -42,48 +42,48 @@ function Treatment() {
           <h2 className="webTitle">{t("treatmentpage.title")}</h2>
         </div>
 
-        <div className="treatment-layout">
-          <div className="treatment-sidebar">
-            <Select
-              className="selectSymptom"
-              options={options}
-              value={options.find(opt => opt.value === selectedDiseaseValue) || null}
-              onChange={handleChange}
-              isClearable
-              placeholder={t("treatmentpage.placeholder")}
-              noOptionsMessage={({ inputValue }) =>
-                inputValue.length < 2
-                  ? t("treatmentpage.noOptionsShort")
-                  : t("treatmentpage.noOptionsNotFound")
-              }
-            />
-          </div>
+        <div className="treatment-searchbar">
+          <Select
+            className="selectSymptom"
+            classNamePrefix="custom"
+            options={options}
+            value={options.find(opt => opt.value === selectedDiseaseValue) || null}
+            onChange={handleChange}
+            isClearable
+            placeholder={t("treatmentpage.placeholder")}
+            noOptionsMessage={({ inputValue }) =>
+              inputValue.length < 2
+                ? t("treatmentpage.noOptionsShort")
+                : t("treatmentpage.noOptionsNotFound")
+            }
+          />
+        </div>
 
-          <div className="treatment-scrollable-list">
-            {diseasesToDisplay.length === 0 ? (
-              <p>{t("treatment.noInfo")}</p>
-            ) : (
-              diseasesToDisplay.map((d, index) => (
-                <div className="card p-3 mb-3" key={index}>
-                  <h5>{t(`disease.${d.disease}`)}</h5>
+        <div className="treatment-scrollable-list">
+          {diseasesToDisplay.length === 0 ? (
+            <p>{t("treatment.noInfo")}</p>
+          ) : (
+            diseasesToDisplay.map((d, index) => (
+              <div className="card p-3 mb-3" key={index}>
+                <h5>{t(`disease.${d.disease}`)}</h5>
 
-                  <div className="treatmentRow">
-                    <strong className="itemLabel">{t("treatmentpage.info")}:</strong>
-                    <span className="itemValue">{t(`information.${d.disease}`)}</span>
-                  </div>
-
-                  <div className="treatmentRow">
-                    <strong className="itemLabel">{t("treatmentpage.treatment")}:</strong>
-                    <span className="itemValue">{t(`treatment.${d.disease}`)}</span>
-                  </div>
+                <div className="treatmentRow">
+                  <strong className="itemLabel">{t("treatmentpage.info")}:</strong>
+                  <span className="itemValue">{t(`information.${d.disease}`)}</span>
                 </div>
-              ))
-            )}
-          </div>
+
+                <div className="treatmentRow">
+                  <strong className="itemLabel">{t("treatmentpage.treatment")}:</strong>
+                  <span className="itemValue">{t(`treatment.${d.disease}`)}</span>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
   );
+
 }
 
 export default Treatment;

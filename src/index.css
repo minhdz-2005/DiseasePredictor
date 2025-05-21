@@ -71,12 +71,11 @@ button:focus-visible {
 /* EDIT STYLE */
 
 body {
-  background-image: url('/Background.png');
+  background: linear-gradient(to bottom right, #ffffff, #ffd6d6, rgb(232, 215, 255));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 }

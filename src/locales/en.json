@@ -18,8 +18,8 @@
 
   "statisticpage": {
     "title": "Statistics of Disease Prediction",
-    "subtitle": "Based on prediction times",
-    "countLabel": "Prediction times"
+    "subtitle": "Based on predicted time",
+    "countLabel": "Predicted times"
   },
 
   "treatmentpage": {

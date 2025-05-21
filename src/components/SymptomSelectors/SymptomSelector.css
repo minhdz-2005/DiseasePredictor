@@ -3,3 +3,29 @@
     max-width: 800px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Ghi đè scrollbar trong menu dropdown của react-select */
+.selectSymptom .react-select__menu-list {
+  scrollbar-width: thin !important;
+  scrollbar-color: #aaa #f0f0f0 !important; /* màu thanh kéo và track */
+
+  /* Đối với Webkit (Chrome, Edge, Safari) */
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+  border-radius: 4px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-thumb {
+  background: #888 !important;
+  border-radius: 4px !important;
+}
+
+.selectSymptom .custom__menu-list::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}

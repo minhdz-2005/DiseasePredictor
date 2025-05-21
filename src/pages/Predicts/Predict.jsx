@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import SymptomSelector from '/src/components/SymptomSelectors/SymptomSelector';
 import { useTranslation } from 'react-i18next';
@@ -20,7 +22,13 @@ function Predict() {
 
   // Hàm gọi dự đoán
   const handlePredict = () => {
-    if (selectedSymptoms.length === 0) return alert(t("predictpage.alert"));
+    if (selectedSymptoms.length === 0) {
+      toast.warning(t("predictpage.alert"), {
+        position: "top-center",
+        autoClose: 3000
+      });
+      return;
+    }
 
     axios.post("http://127.0.0.1:8000/predict", {
       symptoms: selectedSymptoms
@@ -112,6 +120,7 @@ function Predict() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

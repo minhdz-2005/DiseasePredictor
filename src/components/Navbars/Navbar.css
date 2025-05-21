@@ -1,37 +1,49 @@
 .myNavbar {
-    background: transparent;
+  background: #ffffff;
+  padding: 0 0 0 10px !important;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo-img {
   max-height: 40px;
 }
 .customToggler {
-  border: 2px solid white !important;
+  border: 2px solid rgb(37, 37, 37) !important;
   background-color: transparent !important;
   border-radius: 5px;
   padding: 6px 10px;
 }
+.customToggler:focus {
+  background: #e3d5d5 !important;
+  box-shadow: none !important;
+}
 
 .toggleIcon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+
+.navbar-collapse.show {
+  padding-bottom: 1rem;
+}
+
 
 .navMenu {
   margin-right: 10px;
 }
 
 .navLink {
-  color: #ffffff !important;
-  font-size: 1rem;
+  color: #560000 !important;
+  font-size: 1rem !important;
   font-weight: 500;
   position: relative;
   padding: 6px 8px;
   transition: all 0.3s ease;
 }
 .navLink:hover {
-  color: #a49fff !important;
+  color: #787878 !important;
 }
 
 .navLink::after {
@@ -41,7 +53,7 @@
   left: 50%;
   width: 0%;
   height: 2px;
-  background-color: #00d4ff;
+  background-color: #950000;
   transition: width 0.3s ease;
 }
 .navLink:hover::after {
@@ -55,7 +67,7 @@
   right: 50%;
   width: 0%;
   height: 2px;
-  background-color: #00d4ff;
+  background-color: #950000;
   transition: width 0.3s ease;
 }
 .navLink:hover::before {
@@ -66,12 +78,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10px;
 }
 
 .language-select {
+  background: #fff0f0 !important;
   width: 70px !important;
-  padding: 0px 10px 0px 10px !important;
+  padding-inline: 10px !important;
   border: none !important;
   font-size: 14px !important;
   height: 30px !important;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23333' d='M5.23 7.21a.75.75 0 011.06.02L10 11.084l3.71-3.854a.75.75 0 111.08 1.04l-4.25 4.417a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 20px !important;
+}
+.language-select:focus {
+  box-shadow: none !important;
 }

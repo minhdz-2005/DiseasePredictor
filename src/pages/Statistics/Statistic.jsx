@@ -60,7 +60,7 @@ const Statistic = () => {
               width={150}
               tick={{ fontSize: 15 }} />
             <Tooltip formatter={(value) => [value, t("statisticpage.countLabel")]} />
-            <Bar dataKey="count" fill="#7169DA" />
+            <Bar dataKey="count" fill="#FF6868" />
           </BarChart>
         </ResponsiveContainer>
       </div>
