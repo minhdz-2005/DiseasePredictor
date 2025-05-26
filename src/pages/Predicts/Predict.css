@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -87,6 +89,7 @@
   align-self: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+
 .predictButton:hover {
   background: #1e13b5 !important;
 }
@@ -102,6 +105,7 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .predict-right::-webkit-scrollbar {
   display: none;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { useTranslation } from 'react-i18next';
+
 import './SymptomSelector.css';
 
 function SymptomSelector({ symptoms, selectedSymptoms, onChange }) {

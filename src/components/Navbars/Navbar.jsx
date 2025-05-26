@@ -7,7 +7,6 @@ import "./Navbar.css";
 import * as bootstrap from 'bootstrap';
 window.bootstrap = bootstrap;
 
-
 function Navbar() {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language || "en");
@@ -15,7 +14,7 @@ function Navbar() {
   const handleLanguageChange = (e) => {
     const lang = e.target.value;
     setLanguage(lang);
-    i18n.changeLanguage(lang); // <== thay đổi ngôn ngữ
+    i18n.changeLanguage(lang);
   };
 
   const navRef = useRef();

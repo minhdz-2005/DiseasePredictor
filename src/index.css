@@ -67,9 +67,6 @@ button:focus-visible {
   }
 }
 
-
-/* EDIT STYLE */
-
 body {
   background: linear-gradient(to bottom right, #ffffff, #ffd6d6, rgb(232, 215, 255));
   background-size: cover;
@@ -79,4 +76,3 @@ body {
   margin: 0;
   padding: 0;
 }
-

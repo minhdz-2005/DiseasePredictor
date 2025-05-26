@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+
 import Navbar from "./components/Navbars/Navbar";
 
 import Predict from "./pages/Predicts/Predict";
 import Treatment from "./pages/Treatments/Treatment";
 import Statistics from "./pages/Statistics/Statistic";
 import About from "./pages/Abouts/About";
+
+import './App.css';
 
 function App() {
 

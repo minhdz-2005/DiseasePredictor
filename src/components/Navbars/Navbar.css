@@ -24,11 +24,9 @@
   background-repeat: no-repeat;
 }
 
-
 .navbar-collapse.show {
   padding-bottom: 1rem;
 }
-
 
 .navMenu {
   margin-right: 10px;
@@ -56,6 +54,7 @@
   background-color: #950000;
   transition: width 0.3s ease;
 }
+
 .navLink:hover::after {
   width: 50%;
 }
@@ -70,6 +69,7 @@
   background-color: #950000;
   transition: width 0.3s ease;
 }
+
 .navLink:hover::before {
   width: 50%;
 }
@@ -97,6 +97,7 @@
   background-position: right 0.75rem center !important;
   background-size: 20px !important;
 }
+
 .language-select:focus {
   box-shadow: none !important;
 }

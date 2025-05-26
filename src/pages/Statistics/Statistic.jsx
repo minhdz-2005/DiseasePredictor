@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Statistic.css";
 import {
   BarChart,
   Bar,
@@ -11,6 +10,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { useTranslation } from "react-i18next";
+
+import "./Statistic.css";
 
 const Statistic = () => {
   const { t } = useTranslation();

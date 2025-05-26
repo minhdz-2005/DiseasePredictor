@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import Select from 'react-select';
+
 import './Treatment.css';
 
 function Treatment() {
