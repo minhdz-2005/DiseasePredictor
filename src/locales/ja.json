@@ -3,6 +3,19 @@
   "treatments": "治療",
   "statistics": "統計",
   "about": "紹介",
+  "community": "コミュニティ",
+  "history": "履歴",
+  "admin": "管理者",
+  "login": "ログイン",
+  "logout": "ログアウト",
+
+  "register": "登録",
+  "username": "ユーザー名",
+  "password": "パスワード",
+  "email": "メールアドレス",
+  "username-placeholder": "ユーザー名を入力してください",
+  "password-placeholder": "パスワードを入力してください",
+  "email-placeholder": "メールアドレスを入力してください",
 
   "aboutpage": {
     "hello": "こんにちは！",
@@ -34,6 +47,7 @@
     "treatment": "治療法"
   },
   "predictpage": {
+    "symptoms": "症状",
     "title": "病気予測",
     "button": "予測する",
     "alert": "少なくとも1つの症状を選択してください !",
@@ -65,6 +79,7 @@
     "Gastroenteritis": "胃腸炎",
     "Bronchial Asthma": "気管支喘息",
     "Hypertension ": "高血圧",
+    "Hypertension": "高血圧",
     "Migraine": "片頭痛",
     "Cervical spondylosis": "頚椎症",
     "Paralysis (brain hemorrhage)": "麻痺（脳出血）",
@@ -315,6 +330,58 @@
     "red_sore_around_nose": "鼻の周りの赤いただれ",
     "yellow_crust_ooze": "黄色いかさぶたと滲出液",
     "prognosis": "予後"
+  },
+  "community-page": {
+    "create": "新しい記事を作成",
+    "comment": "コメント",
+    "close": "閉じる",
+    "post-title": "記事のタイトル...",
+    "post-content": "記事の内容...",
+    "publish": "公開",
+    "today": "今日",
+    "yesterday": "昨日",
+    "daysago": "日前",
+    "weekago": "1週間前",
+    "comment-content": "コメントを入力してください...",
+    "send": "送信",
+    "no-post": "記事がない"
+  },
+  "history-page": {
+    "title-logout": "予測履歴を表示するにはログインする必要があります",
+    "title-login": "私の予測履歴",
+    "no-history": "まだ予測履歴はありません。"
+  },
+  "admin-page": {
+    "user-manage": "ユーザー管理",
+    "blog-manage": "ブログ管理",
+    "username": "ユーザー名",
+    "email": "メール",
+    "role": "役割",
+    "created": "作成日",
+    "action": "操作",
+    "promote": "昇格",
+    "demote": "降格",
+    "delete": "削除",
+
+    "filter": "ステータスで絞り込む",
+    "all": "すべて",
+    "pending": "保留",
+    "approved": "承認済み",
+    "rejected": "拒否済み",
+
+    "author": "投稿者",
+    "title": "タイトル",
+    "status": "ステータス",
+    "comment": "コメント",
+
+    "approve": "承認",
+    "reject": "拒否",
+
+    "view": "表示",
+    "hide": "非表示",
+    "content": "内容",
+    "no-comment": "この投稿にはコメントがありません"
   }
+
 
 }

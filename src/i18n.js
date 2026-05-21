@@ -11,12 +11,13 @@ const resources = {
   vi: { translation: translationVI },
   ja: { translation: translationJA },
 };
+const savedLang = localStorage.getItem("lang") || "en";
 
 i18n
   .use(initReactI18next)
   .init({
+    lng: savedLang, 
     resources,
-    lng: "en", // ngôn ngữ mặc định
     fallbackLng: "en",
     interpolation: {
       escapeValue: false, // React đã xử lý XSS rồi

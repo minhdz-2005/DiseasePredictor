@@ -16,33 +16,61 @@ function Predict() {
   // Gọi API lấy danh sách triệu chứng
   useEffect(() => {
     axios.get("http://127.0.0.1:8000/symptoms")
-      .then(res => setAllSymptoms(res.data.symptoms))
+      .then(res => setAllSymptoms(res.data))
       .catch(err => console.error("Error:", err));
   }, []);
 
   // Hàm gọi dự đoán
   const handlePredict = () => {
-    if (selectedSymptoms.length === 0) {
-      toast.warning(t("predictpage.alert"), {
-        position: "top-center",
-        autoClose: 3000
-      });
-      return;
-    }
+  if (selectedSymptoms.length === 0) {
+    toast.warning(t("predictpage.alert"), {
+      position: "top-center",
+      autoClose: 3000
+    });
+    return;
+  }
 
-    axios.post("http://127.0.0.1:8000/predict", {
-      symptoms: selectedSymptoms
-    })
+  const userStr = localStorage.getItem("userDP");
+  const payload = { symptoms: selectedSymptoms };
+  let userId = null;
+
+  if (userStr) {
+    const user = JSON.parse(userStr);
+    userId = user.user.id;
+    payload.user = userId;
+  }
+
+  axios.post("http://127.0.0.1:8000/predict/", payload)
     .then(res => {
       const predicted = res.data.predictions;
       setPredictions(predicted);
+
+      console.log("data: " + res.data.predictions);
+      // Gọi thêm API lưu lịch sử dự đoán nếu user đã đăng nhập
+      if (userId) {
+        const historyPayload = {
+          user: userId,
+          symptoms: selectedSymptoms,
+          disease_1: predicted[0]?.disease || "",
+          disease_2: predicted[1]?.disease || "",
+          disease_3: predicted[2]?.disease || "",
+          prob_1: parseFloat(predicted[0]?.probability) || 0,
+          prob_2: parseFloat(predicted[1]?.probability) || 0,
+          prob_3: parseFloat(predicted[2]?.probability) || 0,
+        };
+
+        console.log("pay: ", historyPayload);
+
+        axios.post("http://127.0.0.1:8000/history/", historyPayload)
+          .then(() => console.log("Prediction history saved successfully"))
+          .catch(err => console.log("Failed to save history:", err.response.data));
+      }
 
       // Sau khi dự đoán xong, gọi thêm thông tin bệnh
       axios.get("http://127.0.0.1:8000/treatments")
         .then(treatmentRes => {
           const allTreatments = treatmentRes.data.treatments;
 
-          // Lọc ra những bệnh được dự đoán
           const relatedTreatments = predicted.map(p => {
             const info = allTreatments.find(t => t.disease === p.disease);
             return {
@@ -56,9 +84,10 @@ function Predict() {
           setTreatmentsInfo(relatedTreatments);
         })
         .catch(err => console.error("Treatment loading failed:", err));
+
     })
     .catch(err => console.error("Predict error:", err));
-  };
+};
 
   return (
     <div className="page-wrapper">

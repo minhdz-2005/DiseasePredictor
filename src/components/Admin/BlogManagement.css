@@ -1,0 +1,74 @@
+.blog-man {
+    padding: 20px;
+}
+
+.blog-man .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.blog-man .admin-table th,
+.blog-man .admin-table td {
+    max-width: 500px;
+    overflow-wrap: break-word;
+    border: 1px solid #ff9797;
+    padding: 10px;
+}
+
+.blog-man .admin-table th {
+    background: transparent;
+}
+
+.blog-man button.approve, .blog-man button.reject {
+    width: 80%;
+}
+.blog-man button.delete {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.blog-man .status.approved {
+    color: green;
+    font-weight: bold;
+}
+.blog-man .status.rejected {
+    color: red;
+    font-weight: bold;
+}
+.blog-man .status.pending {
+    color: orange;
+    font-weight: bold;
+}
+.blog-man .blog-row td {
+    background: transparent;
+}
+
+.blog-man .comment-section td {
+    background: transparent;
+}
+
+.blog-man .comment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.blog-man .comment-table th,
+.blog-man .comment-table td {
+    border: 1px solid #ff9999;
+    padding: 8px;
+}
+
+.blog-man .toggle-btn {
+    min-width: fit-content;
+    padding-inline: 0.5rem;
+}
+
+.blog-man .no-comment {
+    font-style: italic;
+    color: gray;
+}

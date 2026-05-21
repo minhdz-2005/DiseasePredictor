@@ -7,6 +7,9 @@ import Predict from "./pages/Predicts/Predict";
 import Treatment from "./pages/Treatments/Treatment";
 import Statistics from "./pages/Statistics/Statistic";
 import About from "./pages/Abouts/About";
+import Community from "./pages/Community/Community";
+import History from "./pages/History/History";
+import Admin from "./pages/Admin/Admin";
 
 import './App.css';
 
@@ -20,6 +23,9 @@ function App() {
         <Route path="/treatment" element={<Treatment></Treatment>} ></Route>
         <Route path="/statistics" element={<Statistics />} />
         <Route path="/about" element={<About />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );

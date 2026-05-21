@@ -3,6 +3,20 @@
   "treatments": "Treatments",
   "statistics": "Statistics",
   "about": "About",
+  "community": "Community",
+  "history": "History",
+  "admin": "Admin",
+  "login": "Login",
+  "logout": "Log out",
+
+
+  "register": "Register",
+  "username": "Username",
+  "password": "Password",
+  "email": "Email",
+  "username-placeholder": "Enter your username",
+  "password-placeholder": "Enter your password",
+  "email-placeholder": "Enter your email",
 
   "aboutpage": {
     "hello": "Hello!",
@@ -32,7 +46,8 @@
     "treatment": "Treatment"
   },
   "predictpage": {
-    "title": "Disease Prediction",
+    "symptoms": "Symptoms",
+    "title": "Disease Predictor",
     "button": "Predict",
     "alert": "Please choose at least one symptom!",
     "resultTitle": "Prediction Results:",
@@ -64,6 +79,7 @@
     "Gastroenteritis": "Gastroenteritis",
     "Bronchial Asthma": "Bronchial Asthma",
     "Hypertension ": "Hypertension",
+    "Hypertension": "Hypertension",
     "Migraine": "Migraine",
     "Cervical spondylosis": "Cervical spondylosis",
     "Paralysis (brain hemorrhage)": "Paralysis (brain hemorrhage)",
@@ -314,6 +330,58 @@
     "red_sore_around_nose": "Red sore around nose",
     "yellow_crust_ooze": "Yellow crust ooze",
     "prognosis": "Prognosis"
+  },
+  "community-page": {
+    "create": "Create new post",
+    "comment": "Comments",
+    "close": "Close",
+    "post-title": "Post title...",
+    "post-content": "Write something...",
+    "publish": "Publish",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysago": "days ago",
+    "weekago": "A week ago",
+    "comment-content": "Write a comment...",
+    "send": "Send",
+    "no-post": "There no post yet"
+  },
+  "history-page": {
+    "title-logout": "You must login to view your prediction history",
+    "title-login": "My Prediction History",
+    "no-history": "No prediction history yet."
+  },
+  "admin-page": {
+    "user-manage": "User Management",
+    "blog-manage": "Blog Management",
+    "username": "Username",
+    "email": "Email",
+    "role": "Role",
+    "created": "Created At",
+    "action": "Actions",
+    "promote": "Promote",
+    "demote": "Demote",
+    "delete": "Delete",
+
+    "filter": "Filter by status",
+    "all": "All",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+
+    "author": "Author",
+    "title": "Title",
+    "status": "Status",
+    "comment": "Comments",
+
+    "approve": "Approve",
+    "reject": "Reject",
+
+    "view": "View",
+    "hide": "Hide",
+    "content": "Content",
+    "no-comment": "This post have no comment"
   }
 
 }
+

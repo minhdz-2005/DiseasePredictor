@@ -137,3 +137,175 @@
   width: 100%;
   max-width: 500px;
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .treatment-container {
+    height: 85vh;
+    width: 95vw;
+    margin-top: 30px;
+  }
+  
+  .treatment-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .treatment-sidebar {
+    position: static;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    flex: none;
+  }
+  
+  .treatment-scrollable-list {
+    margin-inline: 5%;
+    margin-bottom: 20px;
+  }
+  
+  .pillIcon {
+    font-size: 45px;
+  }
+  
+  .webTitle {
+    font-size: 22px;
+  }
+  
+  .treatment-searchbar {
+    padding: 0 15px;
+  }
+  
+  .selectSymptom {
+    max-width: 400px;
+  }
+}
+
+/* Large Phone (576px - 767px) */
+@media (max-width: 767px) {
+  .treatment-container {
+    height: 90vh;
+    width: 98vw;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .treatment-header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .treatment-sidebar {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+  }
+  
+  .treatment-scrollable-list {
+    margin-inline: 3%;
+    margin-bottom: 15px;
+  }
+  
+  .pillIcon {
+    font-size: 40px;
+  }
+  
+  .webTitle {
+    font-size: 20px;
+  }
+  
+  .treatment-searchbar {
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+  
+  .selectSymptom {
+    max-width: 100%;
+  }
+  
+  .treatmentRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .itemLabel {
+    min-width: auto;
+  }
+  
+  .card {
+    margin: 3px;
+    border-radius: 10px;
+  }
+}
+
+/* Small Phone (< 576px) */
+@media (max-width: 575px) {
+  .treatment-container {
+    height: 95vh;
+    width: 100vw;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .treatment-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .treatment-sidebar {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+  }
+  
+  .treatment-scrollable-list {
+    margin-inline: 2%;
+    margin-bottom: 10px;
+  }
+  
+  .pillIcon {
+    font-size: 35px;
+  }
+  
+  .webTitle {
+    font-size: 18px;
+  }
+  
+  .treatment-searchbar {
+    padding: 0 8px;
+    margin-bottom: 10px;
+  }
+  
+  .itemLabel,
+  .itemValue {
+    font-size: 13px;
+  }
+  
+  .treatment-scrollable-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .selectSymptom .custom__menu-list::-webkit-scrollbar {
+    width: 6px !important;
+  }
+}
+
+/* Laptop (992px - 1199px) - Minor adjustments */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .treatment-container {
+    width: 92vw;
+    max-width: 1100px;
+  }
+  
+  .treatment-sidebar {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  .treatment-scrollable-list {
+    margin-inline: 4%;
+  }
+}

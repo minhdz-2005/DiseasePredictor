@@ -21,3 +21,83 @@
   font-size: 4rem;
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+
+/* ===== RESPONSIVE STYLES FOR CHART CONTAINER ===== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .chart-container {
+    height: 85vh;
+    width: 95vw;
+    margin-top: 30px;
+    border-radius: 18px;
+  }
+  
+  .statisticIcon {
+    font-size: 3.5rem;
+  }
+  
+  .statistic-header h4 {
+    font-size: 1.3rem;
+  }
+  
+  .statistic-header h6 {
+    font-size: 1rem;
+  }
+}
+
+/* Large Phone (576px - 767px) */
+@media (max-width: 767px) {
+  .chart-container {
+    height: 90vh;
+    width: 98vw;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .statisticIcon {
+    font-size: 3rem;
+  }
+  
+  .statistic-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .statistic-header h6 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Phone (< 576px) */
+@media (max-width: 575px) {
+  .chart-container {
+    height: 95vh;
+    width: 100vw;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  .statisticIcon {
+    font-size: 2.5rem;
+  }
+  
+  .statistic-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .statistic-header h6 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Laptop (992px - 1199px) - Minor adjustments */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .chart-container {
+    width: 92vw;
+    max-width: 1100px;
+  }
+  
+  .statisticIcon {
+    font-size: 3.8rem;
+  }
+}

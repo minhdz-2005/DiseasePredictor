@@ -1,0 +1,9 @@
+.ad-page {
+    background-color: transparent;
+}
+
+.ad-page .mode-btn {
+    position: fixed;
+    top: 4rem;
+    left: 2rem;
+}

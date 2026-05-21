@@ -1,0 +1,283 @@
+/* =========================
+   COMMUNITY PAGE WRAPPER
+========================= */
+.com-page {
+    background-color: #ffffff;
+    width: 40vw;
+    min-width: 500px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    margin-top: 2rem;
+}
+
+.com-page .create-btn {
+  width: fit-content;
+  background: linear-gradient(to right, #6a78ff, #a074ff);
+  color: white;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  transition: 0.3s;
+  align-self: flex-end;
+}
+
+.com-page .create-btn:hover {
+  opacity: 0.9;
+}
+
+.com-page .create-box {
+  background: #f9f9ff;
+  border: 1px solid #deddfc;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.com-page .post-content {
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgb(231, 231, 231);
+    transition: all 0.4s ease;
+
+    padding: 0.5rem 0.5rem;
+}
+
+.com-page .post-content:focus {
+    outline: none !important;
+    scale: 1.02;
+}
+/* ------- Custom scrollbar cho form-control ------- */
+.post-content::-webkit-scrollbar {
+  width: 8px;               /* độ rộng thanh */
+}
+
+.post-content::-webkit-scrollbar-track {
+  background: #f1f1f1;      /* nền của track */
+  border-radius: 10px;
+}
+
+.post-content::-webkit-scrollbar-thumb {
+  background: #c27625;      /* màu chính */
+  border-radius: 10px;
+}
+
+.post-content::-webkit-scrollbar-thumb:hover {
+  background: #a35f1f;      /* hover đậm hơn */
+}
+
+/* Firefox */
+.post-content {
+  scrollbar-width: thin;
+  scrollbar-color: #c27625 #f1f1f1;
+}
+
+
+/* =========================
+   BLOG ITEM
+========================= */
+.com-page .blog {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    background: #f9f9f9;
+
+    border: 1px solid #e7e7e7;
+    transition: all 0.3s ease;
+
+    margin-top: 1.2rem;
+}
+
+.com-page .blog:hover {
+    background: #f4f4f4;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   AUTHOR + TIME
+========================= */
+.com-page .author {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 2px;
+    align-self: flex-start;
+}
+
+.com-page .time-created {
+    font-size: 0.7rem;
+    color: #777;
+    margin-bottom: 0.8rem;
+    margin-left: 1rem;
+}
+
+/* =========================
+   BLOG TITLE
+========================= */
+.com-page .title {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+}
+
+/* =========================
+   BLOG CONTENT
+========================= */
+.com-page .content {
+    overflow-wrap: break-word;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   COMMENT BUTTON
+========================= */
+.com-page .comment-btn {
+    background-color: white;
+    color: #333;
+
+    border: 1px solid #d0d0d0;
+    border-radius: 0.6rem;
+
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    margin: 0 1rem 0.8rem 0;
+}
+
+.com-page .comment-btn:hover {
+    background-color: #ebeffd;
+    border-color: #c3cfff;
+}
+
+/* =========================
+   COMMENT SECTION
+========================= */
+.com-page .comment-section {
+    display: none;
+}
+
+.com-page .comment-section.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 0.8rem;
+    border: 1px solid #e4e4e4;
+
+    max-height: 350px;
+    overflow: hidden;
+}
+
+/* =========================
+   COMMENT INPUT
+========================= */
+.comment-input-container {
+    width: 100%;
+    position: relative;
+}
+
+.com-page .comment-input {
+    background-color: #ececec;
+    width: 100%;
+    color: black;
+
+    border: none;
+    border-radius: 1rem;
+
+    padding: 0.6rem 4rem 0.6rem 1rem;
+
+    transition: all 0.3s ease;
+}
+
+.com-page .comment-input:focus {
+    outline: none;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15);
+}
+
+.com-page .send-btn {
+    background-color: #5a66d6;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 1rem;
+    border: none;
+
+    padding: 0.45rem 0.7rem;
+
+    transition: all 0.3s ease;
+}
+
+.com-page .send-btn:hover {
+    background-color: #1c227f;
+}
+
+/* =========================
+   COMMENT LIST
+========================= */
+.comment-box {
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Scrollbar styling for Chrome */
+.comment-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.comment-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.comment-box::-webkit-scrollbar-thumb {
+    background-color: #c27625;
+    border-radius: 4px;
+}
+
+.comment-box::-webkit-scrollbar-thumb:hover {
+    background-color: #a05d1f;
+}
+
+/* Firefox */
+.comment-box {
+    scrollbar-width: thin;
+    scrollbar-color: #c27625 #f1f1f1;
+}
+
+/* =========================
+   COMMENT ITEM
+========================= */
+.com-page .comment-time {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: 0.3rem;
+}
+
+.com-page .comment-content {
+    background-color: #ececec;
+    color: #333;
+
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+    max-width: 90%;
+    overflow-wrap: break-word;
+}

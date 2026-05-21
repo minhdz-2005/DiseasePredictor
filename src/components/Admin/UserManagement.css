@@ -1,0 +1,48 @@
+.user-man {
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.role-badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.role-badge.admin {
+    background: #ff4d4d;
+    color: white;
+}
+
+.role-badge.user {
+    background: #4da6ff;
+    color: white;
+}
+
+.action-cell .btn {
+    margin-right: 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-role {
+    width: 100%;
+}
+
+.btn-delete {
+    width: 100%;
+}

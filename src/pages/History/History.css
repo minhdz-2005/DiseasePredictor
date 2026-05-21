@@ -1,0 +1,248 @@
+.his-page {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.his-page .page-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.his-page .history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scrollbar đẹp */
+.his-page .history-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.his-page .history-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.his-page .history-list::-webkit-scrollbar-thumb {
+  background-color: #c27625;
+  border-radius: 4px;
+  border: 2px solid #f1f1f1;
+}
+
+.his-page .history-list::-webkit-scrollbar-thumb:hover {
+  background-color: #a05d1f;
+}
+
+.his-page .history-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.his-page .history-date {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: right;
+}
+
+.his-page .history-symptoms {
+  font-size: 1rem;
+  color: #333;
+}
+
+.his-page .history-results {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.his-page .disease {
+  background-color: #f8f3f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.his-page .disease-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.his-page .disease-prob {
+  font-weight: bold;
+  color: #c27625;
+}
+
+.his-page .no-history {
+  text-align: center;
+  color: #888;
+}
+
+/* ===== RESPONSIVE STYLES FOR HISTORY PAGE ===== */
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  .his-page {
+    padding: 0 15px;
+  }
+  
+  .his-page .page-title {
+    font-size: 1.6rem;
+  }
+  
+  .his-page .history-list {
+    max-height: 450px;
+    gap: 12px;
+  }
+  
+  .his-page .history-item {
+    padding: 10px 14px;
+    gap: 6px;
+  }
+  
+  .his-page .history-symptoms {
+    font-size: 0.95rem;
+  }
+  
+  .his-page .history-results {
+    gap: 10px;
+  }
+  
+  .his-page .disease {
+    padding: 5px 8px;
+    gap: 8px;
+  }
+}
+
+/* Large Phone (576px - 767px) */
+@media (max-width: 767px) {
+  .his-page {
+    padding: 0 12px;
+  }
+  
+  .his-page .page-title {
+    font-size: 1.4rem;
+  }
+  
+  .his-page .history-list {
+    max-height: 400px;
+    gap: 10px;
+    padding-right: 8px;
+  }
+  
+  .his-page .history-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .his-page .history-item {
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+  
+  .his-page .history-date {
+    font-size: 0.85rem;
+  }
+  
+  .his-page .history-symptoms {
+    font-size: 0.9rem;
+  }
+  
+  .his-page .history-results {
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .his-page .disease {
+    padding: 4px 8px;
+    justify-content: space-between;
+  }
+  
+  .his-page .disease-name {
+    font-size: 0.9rem;
+  }
+  
+  .his-page .disease-prob {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Phone (< 576px) */
+@media (max-width: 575px) {
+  .his-page {
+    padding: 0 8px;
+  }
+  
+  .his-page .page-title {
+    font-size: 1.2rem;
+  }
+  
+  .his-page .history-list {
+    max-height: 350px;
+    gap: 8px;
+    padding-right: 5px;
+  }
+  
+  .his-page .history-item {
+    padding: 6px 10px;
+    border-radius: 5px;
+    gap: 4px;
+  }
+  
+  .his-page .history-date {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  
+  .his-page .history-symptoms {
+    font-size: 0.85rem;
+  }
+  
+  .his-page .history-results {
+    gap: 6px;
+  }
+  
+  .his-page .disease {
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+  
+  .his-page .disease-name {
+    font-size: 0.85rem;
+  }
+  
+  .his-page .disease-prob {
+    font-size: 0.85rem;
+  }
+  
+  .his-page .no-history {
+    font-size: 0.9rem;
+  }
+}
+
+/* Laptop (992px - 1199px) - Minor adjustments */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .his-page {
+    padding: 0 18px;
+  }
+  
+  .his-page .page-title {
+    font-size: 1.7rem;
+  }
+  
+  .his-page .history-list {
+    max-height: 480px;
+  }
+}

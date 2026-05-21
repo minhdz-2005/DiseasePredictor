@@ -3,6 +3,19 @@
   "treatments": "Điều trị",
   "statistics": "Thống kê",
   "about": "Giới thiệu",
+  "community": "Cộng Đồng",
+  "history": "Lịch Sử",
+  "admin": "Admin",
+  "login": "Đăng Nhập",
+  "logout": "Đăng Xuất",
+
+  "register": "Đăng Ký",
+  "username": "Tên đăng nhập",
+  "password": "Mật khẩu",
+  "email": "Email",
+  "username-placeholder": "Nhập tên đăng nhập của bạn",
+  "password-placeholder": "Nhập mật khẩu của bạn",
+  "email-placeholder": "Nhập email của bạn",
 
   "aboutpage": {
     "hello": "Xin chào!",
@@ -32,6 +45,7 @@
     "treatment": "Phương pháp điều trị"
   },
   "predictpage": {
+    "symptoms": "Các triệu chứng",
     "title": "Dự đoán bệnh",
     "button": "Dự đoán",
     "alert": "Vui lòng chọn ít nhất một triệu chứng!",
@@ -63,6 +77,7 @@
     "Gastroenteritis": "Viêm dạ dày ruột",
     "Bronchial Asthma": "Hen phế quản",
     "Hypertension ": "Tăng huyết áp",
+    "Hypertension": "Tăng huyết áp",
     "Migraine": "Đau nửa đầu",
     "Cervical spondylosis": "Thoái hóa đốt sống cổ",
     "Paralysis (brain hemorrhage)": "Liệt (xuất huyết não)",
@@ -188,7 +203,7 @@
     "shivering": "Rùng mình",
     "chills": "Ớn lạnh",
     "joint_pain": "Đau khớp",
-    "stomach_pain": "Đau bụng",
+    "stomach_pain": "Đau dạ dày",
     "acidity": "Đầy hơi/axit dạ dày",
     "ulcers_on_tongue": "Lở loét trên lưỡi",
     "muscle_wasting": "Teo cơ",
@@ -220,7 +235,7 @@
     "pain_behind_the_eyes": "Đau sau mắt",
     "back_pain": "Đau lưng",
     "constipation": "Táo bón",
-    "abdominal_pain": "Đau bụng",
+    "abdominal_pain": "Đau bụng (nội tạng)",
     "diarrhoea": "Tiêu chảy",
     "mild_fever": "Sốt nhẹ",
     "yellow_urine": "Nước tiểu vàng",
@@ -281,7 +296,7 @@
     "muscle_pain": "Đau cơ",
     "altered_sensorium": "Thay đổi nhận thức",
     "red_spots_over_body": "Nốt đỏ trên cơ thể",
-    "belly_pain": "Đau bụng",
+    "belly_pain": "Đau vùng bụng trước",
     "abnormal_menstruation": "Kinh nguyệt bất thường",
     "dischromic_patches": "Mảng da đổi màu",
     "watering_from_eyes": "Chảy nước mắt",
@@ -313,6 +328,58 @@
     "red_sore_around_nose": "Vết loét đỏ quanh mũi",
     "yellow_crust_ooze": "Chảy dịch vảy vàng",
     "prognosis": "Tiên lượng"
+  },
+  "community-page": {
+    "create": "Tạo bài viết mới",
+    "comment": "Bình luận",
+    "close": "Đóng",
+    "post-title": "Tiêu đề bài viết...",
+    "post-content": "Nội dung bài viết...",
+    "publish": "Đăng",
+    "today": "Hôm nay",
+    "yesterday": "Hôm qua",
+    "daysago": "ngày trước",
+    "weekago": "Một tuần trước",
+    "comment-content": "Viết bình luận...",
+    "send": "Gửi",
+    "no-post": "Chưa có bài viết nào"
+  },
+  "history-page": {
+    "title-logout": "Bạn cần đăng nhập để xem lịch sử dự đoán",
+    "title-login": "Lịch sử dự đoán của tôi",
+    "no-history": "Chưa có lịch sử dự đoán."
+  },
+  "admin-page": {
+    "user-manage": "Quản lý người dùng",
+    "blog-manage": "Quản lý bài viết",
+    "username": "Tên đăng nhập",
+    "email": "Email",
+    "role": "Vai trò",
+    "created": "Ngày tạo",
+    "action": "Thao tác",
+    "promote": "Thăng cấp",
+    "demote": "Giáng cấp",
+    "delete": "Xóa",
+
+    "filter": "Lọc theo trạng thái",
+    "all": "Tất cả",
+    "pending": "Chờ duyệt",
+    "approved": "Đã duyệt",
+    "rejected": "Bị từ chối",
+
+    "author": "Tác giả",
+    "title": "Tiêu đề",
+    "status": "Trạng thái",
+    "comment": "Bình luận",
+
+    "approve": "Duyệt",
+    "reject": "Từ chối",
+
+    "view": "Hiển thị",
+    "hide": "Ẩn",
+    "content": "Nội dung",
+    "no-comment": "Bài viết này không có bình luận"
   }
+
 
 }
