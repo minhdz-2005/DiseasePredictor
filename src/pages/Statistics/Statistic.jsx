@@ -20,7 +20,7 @@ const Statistic = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/statistics")
+      .get(`${import.meta.env.VITE_API_URL}/statistics/`)
       .then((response) => {
         setRawData(response.data.statistics);
       })

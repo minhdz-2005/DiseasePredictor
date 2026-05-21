@@ -2,8 +2,6 @@ import './History.css';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const API_BASE = "http://127.0.0.1:8000";
-
 const History = () => {
   const { t } = useTranslation();
   const [isLogedIn, setIsLogedIn] = useState(false);
@@ -23,7 +21,7 @@ const History = () => {
 
     const fetchHistory = async () => {
       try {
-        const res = await fetch(`${API_BASE}/history/?user=${user.user.id}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/history/?user=${user.user.id}`);
         if (!res.ok) throw new Error("Failed to fetch history");
 
         const data = await res.json();

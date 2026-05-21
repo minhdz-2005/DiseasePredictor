@@ -15,7 +15,7 @@ function Predict() {
 
   // Gọi API lấy danh sách triệu chứng
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/symptoms")
+    axios.get(`${import.meta.env.VITE_API_URL}/symptoms/`)
       .then(res => setAllSymptoms(res.data))
       .catch(err => console.error("Error:", err));
   }, []);
@@ -40,7 +40,7 @@ function Predict() {
     payload.user = userId;
   }
 
-  axios.post("http://127.0.0.1:8000/predict/", payload)
+  axios.post(`${import.meta.env.VITE_API_URL}/predict/`, payload)
     .then(res => {
       const predicted = res.data.predictions;
       setPredictions(predicted);
@@ -61,13 +61,13 @@ function Predict() {
 
         console.log("pay: ", historyPayload);
 
-        axios.post("http://127.0.0.1:8000/history/", historyPayload)
+        axios.post(`${import.meta.env.VITE_API_URL}/history/`, historyPayload)
           .then(() => console.log("Prediction history saved successfully"))
           .catch(err => console.log("Failed to save history:", err.response.data));
       }
 
       // Sau khi dự đoán xong, gọi thêm thông tin bệnh
-      axios.get("http://127.0.0.1:8000/treatments")
+      axios.get(`${import.meta.env.VITE_API_URL}/treatments/`)
         .then(treatmentRes => {
           const allTreatments = treatmentRes.data.treatments;
 

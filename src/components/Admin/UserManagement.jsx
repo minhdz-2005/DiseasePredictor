@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import "./UserManagement.css";
 import { useTranslation } from "react-i18next";
 
-const API_BASE = "http://127.0.0.1:8000";
-
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +16,7 @@ const UserManagement = () => {
     // Fetch danh sách user
     const fetchUsers = async () => {
         try {
-            const res = await fetch(`${API_BASE}/users/`);
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/`);
             if (!res.ok) throw new Error("Failed to fetch users");
 
             const data = await res.json();
@@ -41,7 +39,7 @@ const UserManagement = () => {
         if (!window.confirm("Are you sure you want to delete this user?")) return;
 
         try {
-            const res = await fetch(`${API_BASE}/users/${id}/`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${id}/`, {
                 method: "DELETE",
             });
 
@@ -62,7 +60,7 @@ const UserManagement = () => {
         const newRole = user.role === "admin" ? "user" : "admin";
 
         try {
-            const res = await fetch(`${API_BASE}/users/${user.user_id}/`, {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/${user.user_id}/`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ role: newRole }),

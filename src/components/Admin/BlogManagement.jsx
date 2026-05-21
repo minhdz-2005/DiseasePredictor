@@ -18,7 +18,7 @@ const BlogManagement = () => {
 
     const fetchBlogs = async () => {
         try {
-            const res = await fetch("http://127.0.0.1:8000/blogs/");
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs/`);
             const data = await res.json();
             setBlogs(data);
         } catch (err) {
@@ -28,7 +28,7 @@ const BlogManagement = () => {
 
     const fetchComments = async () => {
         try {
-            const res = await fetch("http://127.0.0.1:8000/comments/");
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/comments/`);
             const data = await res.json();
             setComments(data);
         } catch (err) {
@@ -46,7 +46,7 @@ const BlogManagement = () => {
     const updateBlogStatus = async (id, status) => {
         setLoading(true);
         try {
-            await fetch(`http://127.0.0.1:8000/blogs/${id}/`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}/`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status }),
@@ -63,7 +63,7 @@ const BlogManagement = () => {
         if (!window.confirm("Bạn có chắc muốn xóa comment này?")) return;
 
         try {
-            await fetch(`http://127.0.0.1:8000/comments/${id}/`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/comments/${id}/`, {
                 method: "DELETE",
             });
             fetchComments();

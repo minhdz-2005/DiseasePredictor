@@ -2,7 +2,6 @@ import './Community.css';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
-const API_BASE = "http://127.0.0.1:8000"; // backend Django
 
 const Community = () => {
   const { t } = useTranslation();
@@ -36,7 +35,7 @@ const Community = () => {
     };
 
     try {
-      const res = await fetch(`${API_BASE}/blogs/`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -70,7 +69,7 @@ const Community = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(`${API_BASE}/blogs/`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/blogs/`);
         const data = await res.json();
         const filteredData = data.filter((blog) => blog.status === "approved");
         const sorted = filteredData.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
@@ -87,7 +86,7 @@ const Community = () => {
   // Lấy comment theo blog_id
   const fetchComments = async (blogId) => {
     try {
-      const res = await fetch(`${API_BASE}/comments/?blog=${blogId}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/comments/?blog=${blogId}`);
       const data = await res.json();
       setComments((prev) => ({
         ...prev,
@@ -127,7 +126,7 @@ const Community = () => {
     };
 
     try {
-      const res = await fetch(`${API_BASE}/comments/`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/comments/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

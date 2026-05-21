@@ -12,7 +12,7 @@ function Treatment() {
 
   // Lấy danh sách bệnh từ backend
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/treatments")
+    axios.get(`${import.meta.env.VITE_API_URL}/treatments/`)
       .then(res => {
         setDiseases(res.data.treatments);
       })
