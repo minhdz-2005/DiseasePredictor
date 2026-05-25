@@ -13,6 +13,14 @@ function Predict() {
   const [predictions, setPredictions] = useState([]);
   const [treatmentsInfo, setTreatmentsInfo] = useState([]);
 
+  
+  // Test API connection, if this fails, alert the user and log the error
+  axios.get(`${import.meta.env.VITE_API_URL}/treatments/`)
+    .catch(err => {
+      console.error("Error fetching treatments:", err);
+      alert("Server needs a minute to wake up. Please try again in a moment.");
+    });
+
   // Gọi API lấy danh sách triệu chứng
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_API_URL}/symptoms/`)

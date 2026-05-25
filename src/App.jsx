@@ -14,7 +14,7 @@ import Admin from "./pages/Admin/Admin";
 import './App.css';
 
 function App() {
-
+  
   return (
     <Router>
       <Navbar></Navbar>
